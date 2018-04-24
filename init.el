@@ -67,7 +67,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(atom-one-dark-theme)
+   dotspacemacs-additional-packages '()
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -140,14 +140,13 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(sanityinc-tomorrow-bright
-                         sanityinc-tomorrow-night
-                         atom-one-dark)
+                         sanityinc-tomorrow-night)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("DejaVu Sans Mono"
-                               :size 14
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -327,6 +326,8 @@ you should place your code here."
   (setq web-mode-css-indent-offset 2) ; web-mode, css in html file
   (setq web-mode-code-indent-offset 2) ; web-mode, js code in html file
   (setq css-indent-offset 2) ; css-mode
+  (setq-default fill-column 100)
+  (setq fci-rule-color "#333333")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
